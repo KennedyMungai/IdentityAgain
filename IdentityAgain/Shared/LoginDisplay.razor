@@ -1,4 +1,7 @@
-﻿<AuthorizeView>
+﻿@using Microsoft.AspNetCore.Components.Authorization]
+@inject NavigationManager Navigation
+
+<AuthorizeView>
     <Authorized>
         <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
         <form method="post" action="Identity/Account/LogOut">
